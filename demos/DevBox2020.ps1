@@ -50,14 +50,14 @@ code --install-extension msjsdiag.debugger-for-edge
 
 choco install -y nodejs-lts
 
-choco install -y visualstudio2019community
-choco install -y visualstudio2019-workload-azure
-choco install -y visualstudio2019-workload-azurebuildtools
-choco install -y visualstudio2019-workload-data
-choco install -y visualstudio2019-workload-databuildtools
-choco install -y visualstudio2019-workload-datascience
-choco install -y visualstudio2019-workload-netweb
-choco install -y visualstudio2019-workload-webbuildtools
+# choco install -y visualstudio2019community
+# choco install -y visualstudio2019-workload-azure
+# choco install -y visualstudio2019-workload-azurebuildtools
+# choco install -y visualstudio2019-workload-data
+# choco install -y visualstudio2019-workload-databuildtools
+# choco install -y visualstudio2019-workload-datascience
+# choco install -y visualstudio2019-workload-netweb
+# choco install -y visualstudio2019-workload-webbuildtools
 
 choco install -y microsoftwebdriver
 
