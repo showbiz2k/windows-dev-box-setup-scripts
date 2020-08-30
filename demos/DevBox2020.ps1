@@ -48,8 +48,7 @@ choco install -y vscode
 
 choco install -y azure-cli
 Install-Module -Force Az
-c
-hoco install -y microsoftazurestorageexplorer
+choco install -y microsoftazurestorageexplorer
 choco install -y azure-data-studio
 
 code --install-extension msjsdiag.debugger-for-chrome
