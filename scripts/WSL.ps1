@@ -1,15 +1,10 @@
-choco install -y Microsoft-Windows-Subsystem-Linux --source="'windowsfeatures'"
-
-#--- Ubuntu ---
-# TODO: Move this to choco install once --root is included in that package
-Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile ~/Ubuntu.appx -UseBasicParsing
-Add-AppxPackage -Path ~/Ubuntu.appx
-# run the distro once and have it install locally with root user, unset password
-
-RefreshEnv
-Ubuntu1804 install --root
-Ubuntu1804 run apt update
-Ubuntu1804 run apt upgrade -y
+Write-Output "Installing Linux Subsystem..."
+If ([System.Environment]::OSVersion.Version.Build -eq 14393) {
+    # 1607 needs developer mode to be enabled
+    Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" -Name "AllowDevelopmentWithoutDevLicense" -Type DWord -Value 1
+    Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" -Name "AllowAllTrustedApps" -Type DWord -Value 1
+}
+Enable-WindowsOptionalFeature -Online -FeatureName "Microsoft-Windows-Subsystem-Linux" -NoRestart -WarningAction SilentlyContinue | Out-Null
 
 <#
 NOTE: Other distros can be scripted the same way for example:
