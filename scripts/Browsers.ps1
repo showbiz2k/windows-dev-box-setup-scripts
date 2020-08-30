@@ -1,3 +1,3 @@
 #--- Browsers ---
-choco install -y googlechrome
-choco install -y firefox
+choco  --cacheLocation="c:\temp" install -y googlechrome
+choco  --cacheLocation="c:\temp" install -y firefox

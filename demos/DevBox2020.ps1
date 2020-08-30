@@ -36,19 +36,19 @@ choco install -y wsl-alpine
 executeScript "Docker.ps1";
 
 # #--- Tools ---
-choco install -y powershell-core
+choco --cacheLocation="c:\temp" install -y powershell-core
 
-choco install -y vscode
+choco --cacheLocation="c:\temp" install -y vscode
 
-choco install -y azure-cli
+choco --cacheLocation="c:\temp" install -y azure-cli
 Install-Module -Force Az
-choco install -y microsoftazurestorageexplorer
-choco install -y azure-data-studio
+choco --cacheLocation="c:\temp" install -y microsoftazurestorageexplorer
+choco  --cacheLocation="c:\temp"install -y azure-data-studio
 
 code --install-extension msjsdiag.debugger-for-chrome
 code --install-extension msjsdiag.debugger-for-edge
 
-choco install -y nodejs-lts
+choco  --cacheLocation="c:\temp" install -y nodejs-lts
 
 # choco install -y visualstudio2019community
 # choco install -y visualstudio2019-workload-azure
@@ -59,9 +59,9 @@ choco install -y nodejs-lts
 # choco install -y visualstudio2019-workload-netweb
 # choco install -y visualstudio2019-workload-webbuildtools
 
-choco install -y microsoftwebdriver
+choco  --cacheLocation="c:\temp" install -y microsoftwebdriver
 
-choco install -y powertoys
+choco  --cacheLocation="c:\temp" install -y powertoys
 
 
 Enable-UAC
